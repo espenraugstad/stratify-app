@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stratify</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Stratify</title>
   </head>
   <body>
     <nav>
@@ -41,17 +41,41 @@
         </div>
       </div>
     </nav>
-
-    <main class="index">
-      <h1>Welcome</h1>
-      <p class="center-text">
-        Merge, create, and populate multiple playlists at once.
-      </p>
-      <button id="loginBtn">Login with spotify</button>
+    <main class="home">
+      <h1>Home</h1>
+      <p>What do you want to do today?</p>
+      <div class="options">
+        <div class="options__card" id="merge-playlists">
+          <img
+            src="./assets/merge_on_light.png"
+            alt=""
+            class="options__icon"
+            id="merge-playlists-icon"
+          />
+          <div class="options__text">Merge playlists</div>
+        </div>
+        <div class="options__card" id="delete-playlists" #>
+          <img
+            src="./assets/delete_on_light.png"
+            alt=""
+            class="options__icon"
+            id="delete-playlists-icon"
+          />
+          <div class="options__text">Delete playlists</div>
+        </div>
+        <div class="options__card" id="add-songs">
+          <img
+            src="./assets/add_on_light.png"
+            alt=""
+            class="options__icon"
+            id="add-songs-icon"
+          />
+          <div class="options__text">Add songs to playlists</div>
+        </div>
+      </div>
     </main>
 
     <footer>Created by Espen Raugstad</footer>
-
-    <script src="./script/index.js" type="module"></script>
+    <script src="./script/home.js" type="module"></script>
   </body>
 </html>

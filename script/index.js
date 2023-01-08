@@ -1,3 +1,4 @@
+import { header, setMode } from "./modules/header.js";
 import { login, getCode, getAccessToken } from "./modules/auth.js";
 
 /***** HTML ELEMENTS *****/
@@ -12,6 +13,11 @@ loginBtn.addEventListener("click", async () => {
 
 /***** FUNCTIONS *****/
 window.onload = async () => {
+  await header();
+
+  localStorage.setItem("mode", "light");
+  setMode();
+  getCode();
   if (getCode()) {
     await getAccessToken();
   }

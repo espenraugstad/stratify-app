@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stratify</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Stratify</title>
   </head>
   <body>
     <nav>
@@ -22,6 +22,9 @@
         <div class="nav__primary" mobile-visible="false">
           <span class="nav__close">&times;</span>
           <ul class="nav__options">
+            <li class="nav__item">
+              <a href="home.html" class="nav__link">Home</a>
+            </li>
             <li class="nav__item">
               <a href="#" class="nav__link">About</a>
             </li>
@@ -41,17 +44,22 @@
         </div>
       </div>
     </nav>
-
-    <main class="index">
-      <h1>Welcome</h1>
-      <p class="center-text">
-        Merge, create, and populate multiple playlists at once.
-      </p>
-      <button id="loginBtn">Login with spotify</button>
+    <main class="merge">
+      <h1>Merge Playlists</h1>
+      <h2 id="merge-action">Click on the playlists you want to merge</h2>
+      <div class="selections">
+        <div><span id="selected-playlists">0</span> selected</div>
+        <div>
+          <label for="showSelected">Only show selected</label>
+          <input id="showSelected" type="checkbox" />
+        </div>
+      </div>
+      <button id="selectTargetBtn">Next</button>
+      <label for="searchPlaylistsMerge">Search Playlists</label>
+      <input id="searchPlaylistsMerge" class="search" type="search" />
+      <div id="list-of-playlists" class="">Loading playlists</div>
     </main>
-
     <footer>Created by Espen Raugstad</footer>
-
-    <script src="./script/index.js" type="module"></script>
+    <script src="./script/merge.js" type="module"></script>
   </body>
 </html>
