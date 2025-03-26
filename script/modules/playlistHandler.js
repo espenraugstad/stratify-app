@@ -2,7 +2,7 @@ import { getAccess } from "./auth.js";
 
 /***** GLOBAL VARIABLES *****/
 export async function getPlaylists(offset) {
-  let access = await getAccess();
+  let access = getAccess();
   if (access) {
     const url = `https://api.spotify.com/v1/me/playlists?offset=${offset}&limit=50`;
 

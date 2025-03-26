@@ -25,6 +25,7 @@ window.onload = async () => {
   await header();
   setMode();
   await getAllPlaylists(0);
+  console.log(allPlaylists);
   searchPlaylistsMerge.value = "";
   displayPlaylists();
 };
@@ -83,7 +84,7 @@ function createPlaylistItem(list, target) {
 
   let playlistImage = document.createElement("img");
   playlistImage.classList.add("playlist--image");
-  if (list.images[0]) {
+  if (list.images && list.images[0]) {
     playlistImage.src = list.images[0].url;
   } else {
     playlistImage.src = "./assets/playlist_on_light.png";

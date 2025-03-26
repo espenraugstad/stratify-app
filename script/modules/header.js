@@ -66,7 +66,7 @@ export async function header() {
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-    localStorage.removeItem("cv");
+    localStorage.removeItem("code_verifier");
     localStorage.removeItem("mode");
 
     location.replace("index.html");

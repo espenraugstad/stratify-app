@@ -13,12 +13,17 @@ loginBtn.addEventListener("click", async () => {
 
 /***** FUNCTIONS *****/
 window.onload = async () => {
-  await header();
-
-  localStorage.setItem("mode", "light");
-  setMode();
-  getCode();
-  if (getCode()) {
-    await getAccessToken();
+  let code = getCode();
+  console.log(code);
+  if (!code) {
+    console.log("Clearing");
+    localStorage.clear();
+  } else {
+    await header();
+    localStorage.setItem("mode", "light");
+    setMode();
+    if (code) {
+      await getAccessToken(code);
+    }
   }
 };
